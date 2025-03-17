@@ -1,5 +1,5 @@
 class MobileNavbar {
-    constructor(mobileMenu, navList) {
+    constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
         this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
@@ -24,7 +24,11 @@ class MobileNavbar {
         this.animateLinks();
     }
 
-    nit() {
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
         if (this.mobileMenu) {
           this.addClickEvent();  
         }
@@ -37,4 +41,4 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list",
   ".nav-list li",
 );
-mobileNavbar.init()
+mobileNavbar.init();

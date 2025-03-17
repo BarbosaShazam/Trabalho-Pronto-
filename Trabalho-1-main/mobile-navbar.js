@@ -2,7 +2,7 @@ class MobileNavbar {
     constructor(mobileMenu, navList) {
         this.mobileMenu = document.querySelector(mobileMenu);
         this.navList = document.querySelector(navList);
-        this.navLinks = document.querySelectorAll();
+        this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
 
         this.handleClick = this.handleClick.bind();
